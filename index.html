@@ -286,8 +286,13 @@ nav.scrolled {
 .sk-bar-fill.on { width: var(--w); }
 .sk-pct { font-size: 11px; color: var(--dim); letter-spacing: 0.06em; min-width: 28px; text-align: right; }
 
+.projects-grid {
+  display: grid; gap: 24px; grid-template-columns: 1fr;
+}
+@media (min-width: 900px) { .projects-grid { grid-template-columns: 1fr 1fr; } }
+
 .project-single {
-  border: 1px solid var(--border); padding: 48px 36px; max-width: 640px;
+  border: 1px solid var(--border); padding: 48px 36px;
   position: relative; transition: border-color 0.3s; background: rgba(15,15,24,0.5);
 }
 .project-single:hover { border-color: rgba(200,169,110,0.3); }
@@ -463,19 +468,34 @@ nav.scrolled {
       <div class="s-eyebrow"><div class="eyebrow-line"></div><span>Работы</span></div>
       <h2 class="s-title">Мои <em>проекты</em></h2>
     </div>
-    <div class="project-single">
-      <div class="proj-num">01</div>
-      <span class="proj-tag">Telegram Bot</span>
-      <h3 class="proj-name">Ryzen AI</h3>
-      <p class="proj-desc">Просто хороший ИИ.</p>
-      <div class="proj-stack">
-        <span class="proj-tech">Python</span>
-        <span class="proj-tech">aiogram</span>
+    <div class="projects-grid">
+      <div class="project-single">
+        <div class="proj-num">01</div>
+        <span class="proj-tag">Telegram Bot</span>
+        <h3 class="proj-name">Ryzen AI</h3>
+        <p class="proj-desc">Просто хороший ИИ.</p>
+        <div class="proj-stack">
+          <span class="proj-tech">Python</span>
+          <span class="proj-tech">aiogram</span>
+        </div>
+        <a href="https://t.me/RyzenAiBot" target="_blank" class="proj-link-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2.5L2.5 10l7 2.5M21.5 2.5L14 21.5l-4.5-9M21.5 2.5L9.5 12.5"/></svg>
+          Открыть в Telegram
+        </a>
       </div>
-      <a href="https://t.me/RyzenAiBot" target="_blank" class="proj-link-btn">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2.5L2.5 10l7 2.5M21.5 2.5L14 21.5l-4.5-9M21.5 2.5L9.5 12.5"/></svg>
-        Открыть в Telegram
-      </a>
+      <div class="project-single">
+        <div class="proj-num">02</div>
+        <span class="proj-tag">Проект</span>
+        <h3 class="proj-name">Название</h3>
+        <p class="proj-desc">Описание проекта.</p>
+        <div class="proj-stack">
+          <span class="proj-tech">Технология</span>
+        </div>
+        <a href="#" target="_blank" class="proj-link-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2.5L2.5 10l7 2.5M21.5 2.5L14 21.5l-4.5-9M21.5 2.5L9.5 12.5"/></svg>
+          Открыть
+        </a>
+      </div>
     </div>
   </section>
 
